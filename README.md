@@ -6,7 +6,7 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-2025.xxxxx-b31b1b.svg)](https://arxiv.org)
+
 
 **The First Pure Quantum Transformer Architecture for Molecular Property Prediction**
 
@@ -54,7 +54,7 @@ Quantum Transformer introduces a revolutionary architecture that implements the 
 │   ║  │   |ψ⟩ ──[U_Q]──●────────────────────────────●──[Measure]          │  ║   │
 │   ║  │   |ψ⟩ ──[U_K]──┼──●───────────────────●─────┼──[Measure]          │  ║   │
 │   ║  │   |ψ⟩ ──[U_V]──┼──┼──●───────────●────┼─────┼──[Measure]          │  ║   │
-│   ║  │                │  │  │  SWAP     │    │     │                       │  ║   │
+│   ║  │                │  │  │  SWAP     │    │     │                     │  ║   │
 │   ║  │   Attention = Quantum Interference Pattern                        │  ║   │
 │   ║  └───────────────────────────────────────────────────────────────────┘  ║   │
 │   ║         │                                                               ║   │
@@ -82,15 +82,15 @@ Quantum Transformer introduces a revolutionary architecture that implements the 
 
 ```bash
 # From PyPI
-pip install quantum_transformers
+pip install quantum-transformer
 
 # From source
-git clone https://github.com/quantum-ai/q-genesis.git
-cd q-genesis
+git clone https://github.com/rasidi3112/Quantum-Transformer.git
+cd Quantum-Transformer
 pip install -e ".[dev]"
 
 # With all quantum backends
-pip install quantum_transformers[all]
+pip install ".[all]"
 ```
 
 ## Quick Start
