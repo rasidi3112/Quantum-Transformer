@@ -1,0 +1,16 @@
+# Core dependencies
+numpy>=1.21.0
+torch>=2.0.0
+pennylane>=0.32.0
+pennylane-lightning>=0.32.0
+
+# Quantum backends (optional)
+# qiskit>=1.0.0
+# amazon-braket-sdk>=1.50.0
+
+# Molecular (optional)
+# rdkit>=2023.0.0
+
+# Development
+pytest>=7.0.0
+matplotlib>=3.5.0

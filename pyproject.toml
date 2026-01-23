@@ -1,0 +1,109 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantum-transformer"
+version = "0.2.0"
+description = "Pure Quantum Transformer Architecture for Molecular Intelligence"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "Quantum AI Research Team", email = "quantum@research.ai"}
+]
+keywords = [
+    "quantum computing",
+    "quantum transformer",
+    "quantum attention",
+    "quantum machine learning",
+    "molecular property prediction",
+    "drug discovery",
+    "pennylane",
+    "variational quantum circuits",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.21.0",
+    "torch>=2.0.0",
+    "pennylane>=0.32.0",
+    "pennylane-lightning>=0.32.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "pre-commit>=3.0.0",
+]
+ibm = [
+    "qiskit>=1.0.0",
+    "qiskit-ibm-runtime>=0.20.0",
+    "pennylane-qiskit>=0.32.0",
+]
+braket = [
+    "amazon-braket-sdk>=1.50.0",
+    "pennylane-braket>=1.20.0",
+]
+molecular = [
+    "rdkit>=2023.0.0",
+    "openfermion>=1.5.0",
+    "openfermionpyscf>=0.5",
+]
+all = [
+    "quantum-transformer[dev,ibm,braket,molecular]",
+]
+
+[project.urls]
+Homepage = "https://github.com/rasidi3112/Quantum-Transformer"
+Documentation = "https://github.com/rasidi3112/Quantum-Transformer"
+Repository = "https://github.com/rasidi3112/Quantum-Transformer.git"
+Issues = "https://github.com/rasidi3112/Quantum-Transformer/issues"
+
+[project.scripts]
+quantum-transformer = "quantum_transformers.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["quantum_transformers*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "gpu: marks tests requiring GPU",
+    "quantum_hardware: marks tests requiring real quantum hardware",
+]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true

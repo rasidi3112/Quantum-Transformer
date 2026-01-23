@@ -1,0 +1,92 @@
+{
+    "H2": {
+        "formula": "H2",
+        "n_atoms": 2,
+        "n_electrons": 2,
+        "multiplicity": 1,
+        "reference_method": "FCI",
+        "basis": "cc-pVDZ",
+        "equilibrium_bond_length": 0.74,
+        "reference_energy": -1.1373,
+        "notes": "Simplest molecule, benchmark standard"
+    },
+    "LiH": {
+        "formula": "LiH",
+        "n_atoms": 2,
+        "n_electrons": 4,
+        "multiplicity": 1,
+        "reference_method": "FCI",
+        "basis": "cc-pVDZ",
+        "equilibrium_bond_length": 1.595,
+        "reference_energy": -7.8825,
+        "notes": "Ionic character, good for VQE testing"
+    },
+    "BeH2": {
+        "formula": "BeH2",
+        "n_atoms": 3,
+        "n_electrons": 6,
+        "multiplicity": 1,
+        "reference_method": "FCI",
+        "basis": "cc-pVDZ",
+        "equilibrium_geometry": "linear",
+        "reference_energy": -15.8349,
+        "notes": "Linear molecule, 6 electrons"
+    },
+    "H2O": {
+        "formula": "H2O",
+        "n_atoms": 3,
+        "n_electrons": 10,
+        "multiplicity": 1,
+        "reference_method": "CCSD(T)",
+        "basis": "cc-pVDZ",
+        "equilibrium_geometry": {
+            "O": [
+                0.0,
+                0.0,
+                0.117
+            ],
+            "H1": [
+                0.0,
+                0.756,
+                -0.469
+            ],
+            "H2": [
+                0.0,
+                -0.756,
+                -0.469
+            ]
+        },
+        "reference_energy": -76.2419,
+        "notes": "Water molecule, 10 electrons"
+    },
+    "NH3": {
+        "formula": "NH3",
+        "n_atoms": 4,
+        "n_electrons": 10,
+        "multiplicity": 1,
+        "reference_method": "CCSD(T)",
+        "basis": "cc-pVDZ",
+        "reference_energy": -56.2184,
+        "notes": "Ammonia, pyramidal geometry"
+    },
+    "CH4": {
+        "formula": "CH4",
+        "n_atoms": 5,
+        "n_electrons": 10,
+        "multiplicity": 1,
+        "reference_method": "CCSD(T)",
+        "basis": "cc-pVDZ",
+        "reference_energy": -40.2134,
+        "notes": "Methane, tetrahedral"
+    },
+    "C2H4": {
+        "formula": "C2H4",
+        "n_atoms": 6,
+        "n_electrons": 16,
+        "multiplicity": 1,
+        "reference_method": "CCSD(T)",
+        "basis": "cc-pVDZ",
+        "reference_energy": -78.4329,
+        "notes": "Ethylene, planar double bond"
+    }
+}

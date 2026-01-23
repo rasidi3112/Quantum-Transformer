@@ -1,0 +1,59 @@
+# Configuration for Quantum Transformer
+
+# Quantum Transformer Model
+model:
+  architecture: "quantum_transformer"
+  n_qubits: 20
+  n_heads: 4
+  n_layers: 6
+  d_model: 64
+  d_ff: 256
+  max_seq_len: 128
+  dropout: 0.1
+  
+  # Attention
+  attention_type: "swap_test"  # swap_test, inner_product
+  
+  # Positional Encoding
+  positional_encoding: "quantum_sinusoidal"
+
+# Quantum Circuit Settings
+circuit:
+  entanglement: "circular"  # circular, linear, full
+  rotation_gates: ["RY", "RZ"]
+  measurement: "expval"
+  device: "default.qubit"
+
+# Training Configuration
+training:
+  epochs: 200
+  batch_size: 32
+  gradient_clip: 1.0
+  early_stopping_patience: 20
+
+# Optimizer
+optimizer:
+  name: "quantum_adam"
+  lr: 0.01
+  quantum_lr: 0.001  # Lower LR for quantum params
+  betas: [0.9, 0.999]
+  weight_decay: 0.0001
+
+# Learning Rate Scheduler
+scheduler:
+  name: "cosine_annealing"
+  warmup_steps: 500
+  min_lr: 0.00001
+
+# Experiment Settings
+experiment:
+  seed: 42
+  log_every: 10
+  checkpoint_every: 50
+  output_dir: "./outputs"
+
+# Molecular Settings
+molecular:
+  tokenizer: "smiles"
+  max_atoms: 100
+  task: "energy"  # energy, properties, generation

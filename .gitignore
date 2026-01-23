@@ -1,0 +1,101 @@
+# Q-Genesis - Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Documentation
+docs/_build/
+site/
+
+# Quantum computing artifacts
+*.qpy
+*.qasm
+ibmq_credentials.json
+braket_credentials.json
+
+# Experiment outputs
+experiments/benchmarks/results/
+experiments/ablation_studies/results/
+*.h5
+*.hdf5
+*.npz
+
+# Model checkpoints
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Logs
+logs/
+*.log
+tensorboard/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.local
+*.pem
+*.key
+secrets.yaml
+
+# Local config
+local_config.yaml
+user_config.yaml
